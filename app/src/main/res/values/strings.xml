@@ -1,5 +1,13 @@
 <resources>
 
     <string name="app_name">ReadBLERssi</string>
+    <string name="ble4_not_supported">你的手机蓝牙模块不支持蓝牙4.0</string>
+    <string name="ble_name">扫描到蓝牙设备 蓝牙名字=</string>
+    <string name="ble_mac_addr">MAC地址=</string>
+    <string name="bt_open_failed">蓝牙打开失败</string>
+    <string name="ble_connected">已链接上</string>
+    <string name="bt_disconnected">链接断开</string>
+    <string name="scanning">正在扫描</string>
+    <string name="start_scan">开始扫描</string>
 
 </resources>

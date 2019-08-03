@@ -85,7 +85,7 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_marginTop="5dip"
         android:background="@drawable/mainactivity_bluetoothconnect_login"
-        android:text="开始链接"
+        android:text="开始扫描"
         android:textColor="#FFFFFF"
         android:textSize="24sp" />
 
