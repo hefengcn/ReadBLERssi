@@ -23,6 +23,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.UUID;
+
 /**
  * 主界面
  * @author Administrator
@@ -33,6 +36,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Context context = MainActivity.this;
 	//这里需要写入需要链接设备的蓝牙名字
 	private String scanBluetoothName="Autophix";
+	UUID uuid = UUID.fromString("0000180d-0000-1000-8000-00805f9b34fb");
+	final UUID[] myUUID = { uuid};
+
+
 	// 蓝牙链接按钮
 		private Button btnConnect;
 		//BLE RSSI   链接蓝牙设备名  链接蓝牙设备MAC  蓝牙连接状态
@@ -55,7 +62,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		// Stops scanning after 10 seconds.
 		// 10秒后停止扫描
-		private static final long SCAN_PERIOD = 10000;
+		private static final long SCAN_PERIOD = 100000;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -164,7 +171,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			}, SCAN_PERIOD);
 
 			mScanning = true;
-			mBluetoothAdapter.startLeScan(mLeScanCallback);
+			//mBluetoothAdapter.startLeScan(mLeScanCallback);
+			mBluetoothAdapter.startLeScan(myUUID,mLeScanCallback);
+
 		} else {
 			mScanning = false;
 			mBluetoothAdapter.stopLeScan(mLeScanCallback);
