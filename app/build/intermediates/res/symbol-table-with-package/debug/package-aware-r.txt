@@ -1,0 +1,15 @@
+com.example.readblerssi
+drawable btn_checked
+drawable btn_normal
+drawable ic_launcher
+drawable mainactivity_bluetoothconnect_login
+id bluetooth_connect_state
+id bluetooth_mac
+id bluetooth_name
+id mainactivity_bluetooth_connect
+id mainactivity_title
+id rssi_value
+layout activity_main
+string app_name
+style AppBaseTheme
+style AppTheme
